@@ -1,21 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 @media (prefers-color-scheme: light) {
     :root {
       --text: #171717;
-      --background: #edeaf0;
-      --primary: #4c3366;
-      --secondary: #b089d7;
-      --accent: #7a2cc9;
+      --background: #f9f1e1;
+      --primary: #fdeb9b;
+      --secondary: #f6d465;
+      --accent: #ca852b;
     }
   }
-  @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-      --text: #e8e8e8;
-      --background: #110e14;
-      --primary: #b39acc;
-      --secondary: #4e2874;
-      --accent: #8334d3;
+        --text: #171717;
+        --background: #171717;
+        --primary: #f6d465;
+        --secondary: #fdeb9b;
+        --accent: #ca852b;
     }
-  }
+}
 
 .bmc-btn-container {
     max-height: 0;
@@ -23,9 +25,11 @@
     visibility: collapse;
 }
   
-@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 
-html {font-size: 100%;} /* 16px */
+html {
+    font-family: "Poppins" !important;
+    font-size: 100%;
+}
 
 h1 {font-size: 4.210rem; /* 67.36px */}
 
@@ -45,7 +49,7 @@ p {
 body {
     background-color: var(--background);
     color: var(--text);
-    font-family: 'Poppins' !important;
+    font-family: 'Poppins';
     font-weight: 400;
 }
 
@@ -88,7 +92,6 @@ p#copyright {
 	margin-bottom: 5px;
 	margin-top: 150px;
 	color: #666666;
-	/* font-weight: bold; */
 }
 
 .container {
