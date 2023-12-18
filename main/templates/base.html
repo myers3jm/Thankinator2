@@ -8,35 +8,74 @@
 	</head>
 	<body>
 		<div>
-			<!-- Title Section -->
-			<div>
-				<h1 class="title">Thankinator</h1>
-				<h4 class="subtitle"><span class="color-gradient">Scalable </span> <span class="outline-only">Sincerity</span></h4>
-			</div>
+            <table>
+                <tr>
+                    <td class="left">
+                        <div>
+                            <h1 class="title">Thankinator</h1>
+                            <h4 class="subtitle"><span class="color-gradient">Scalable </span> <span class="outline-only">Sincerity</span></h4>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <div>
+                            <div class="subcardDeck active">
+                                <div class="subcard">
+                                    <p>Produce any number of personalized thank-you notes from a spreadsheet.</p>
+                                </div>
+                                <div class="subcard">
+                                    <p>Have complete control over the content of your notes with live previews.</p>
+                                </div>
+                                <div class="subcard">
+                                    <p>Easily add personalizations like photos.</p>
+                                </div>
+                            </div>
+                            <div class="subcardDeck">
+                                <div class="subcard">
+                                    <p>Item 1</p>
+                                </div>
+                                <div class="subcard">
+                                    <p>Item 2</p>
+                                </div>
+                                <div class="subcard">
+                                    <p>Item 3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="right">
+                        <div class="card" style="flex: 1">
+                            <h3 style="padding-left: 2%">Does this tool make your life easier?</h3>
+                            <p>Consider buying me a coffee to say thanks!</p>
+                            <div style="padding: 4%">
+                                <a href="https://www.buymeacoffee.com/jarmyrs"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jarmyrs&button_colour=000000&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=f9f1e1" /></a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">
+                        <div class="button-card">
+                            <button class="div-button" type="button" onclick="changeDeck()">
+                                <h5 class="color-gradient">Get Started</h5>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 
-			<!-- Content Section -->
-			<div class="container">
-				<div style="flex: 2">
-					<div class="subcard">
-						<p>Produce any number of personalized thank-you notes from a spreadsheet.</p>
-					</div>
-					<div class="subcard">
-						<p>Have complete control over the content of your notes with live previews.</p>
-					</div>
-					<div class="subcard">
-						<p>Easily add personalizations like photos.</p>
-					</div>
-				</div>
-
-				<!-- Donation Link Section -->
-				<div class="card" style="flex: 1">
-					<h3 style="padding-left: 2%">Does this tool make your life easier?</h3>
-					<p>Consider buying me a coffee to say thanks!</p>
-					<div style="padding: 4%">
-						<a href="https://www.buymeacoffee.com/jarmyrs"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jarmyrs&button_colour=000000&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=f9f1e1" /></a>
-					</div>
-				</div>
-			</div>
+			<script>
+                let currentIndex = 0;
+                const subcardDecks = document.querySelectorAll('.subcardDeck');
+            
+                function changeDeck() {
+                      subcardDecks[currentIndex].classList.remove('active');
+                      currentIndex = (currentIndex + 1) % subcardDecks.length;
+                      subcardDecks[currentIndex].classList.add('active');
+                }
+            </script>
+			
 		</div>
 		<div id="intellectualprop">
 			<p id="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> J. Matthew Myers. All Rights Reserved</p>

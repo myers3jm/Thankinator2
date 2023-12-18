@@ -7,8 +7,9 @@
       --primary: #fdeb9b;
       --secondary: #f6d465;
       --accent: #ca852b;
+      --dark-accent: #fde7ba;
     }
-  }
+}
 @media (prefers-color-scheme: dark) {
     :root {
         --text: #171717;
@@ -16,15 +17,9 @@
         --primary: #f6d465;
         --secondary: #fdeb9b;
         --accent: #ca852b;
+        --dark-accent: #313131;
     }
 }
-
-.bmc-btn-container {
-    max-height: 0;
-    max-width: 0;
-    visibility: collapse;
-}
-  
 
 html {
     font-family: "Poppins" !important;
@@ -74,18 +69,6 @@ a {
     font-size: 180%;
 }
 
-.outline-only {
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--accent);
-}
-
-.color-gradient {
-    background: -webkit-linear-gradient(bottom right, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 p#copyright {
     font-size: 14px;
 	text-align: center;
@@ -94,11 +77,11 @@ p#copyright {
 	color: #666666;
 }
 
-.container {
+/* .container {
     margin: auto;
     margin-top: 0;
     display: flex;
-}
+} */
 
 div {
     border-radius: 20px;
@@ -106,16 +89,18 @@ div {
 
 div.card {
     background-color: var(--primary);
-    margin-left: 5%;
+    max-height: fit-content;
+    /* margin-left: 5%;
     margin-right: 5%;
     margin-top: 0%;
-    margin-bottom: 0%;
+    margin-bottom: 0%; */
     border-radius: 20px;
 }
 
-div.card p {
-    padding: 4%;
-}
+/* div.card p {
+    padding-left: 4%;
+    padding-right: 4%;
+} */
 
 div.subcard {
     background-color: var(--secondary);
@@ -123,10 +108,58 @@ div.subcard {
     margin-right: 5%;
     margin-top: 0%;
     margin-bottom: 0%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 div.subcard p {
     color: var(--text);
     padding: 4%;
+}
+
+.subcardDeck {
+    display: none;
+}
+
+.subcardDeck.active {
+    display: block;
+}
+
+.button-card {
+    background-color: var(--dark-accent);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+button.div-button {
+    background-color: transparent;
+    /* width: 100%; */
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.outline-only {
+    color: var(--background);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--accent);
+}
+
+.color-gradient {
+    background: -webkit-linear-gradient(bottom right, var(--accent), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+table, tr, td {
+    border: none;
+}
+
+td.left {
+    width: 70%;
+}
+
+td.right {
+    width: 30%;
 }
