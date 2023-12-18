@@ -1,0 +1,129 @@
+@media (prefers-color-scheme: light) {
+    :root {
+      --text: #171717;
+      --background: #edeaf0;
+      --primary: #4c3366;
+      --secondary: #b089d7;
+      --accent: #7a2cc9;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #e8e8e8;
+      --background: #110e14;
+      --primary: #b39acc;
+      --secondary: #4e2874;
+      --accent: #8334d3;
+    }
+  }
+
+.bmc-btn-container {
+    max-height: 0;
+    max-width: 0;
+    visibility: collapse;
+}
+  
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
+
+html {font-size: 100%;} /* 16px */
+
+h1 {font-size: 4.210rem; /* 67.36px */}
+
+h2 {font-size: 3.158rem; /* 50.56px */}
+
+h3 {font-size: 2.369rem; /* 37.92px */}
+
+h4 {font-size: 1.777rem; /* 28.48px */}
+
+h5 {font-size: 1.333rem; /* 21.28px */}
+
+p {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Poppins' !important;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--accent);
+    font-weight: 700;
+    margin: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+a {
+    color: var(--accent);
+}
+
+.title {
+    font-size: 300%;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 180%;
+}
+
+.outline-only {
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--accent);
+}
+
+.color-gradient {
+    background: -webkit-linear-gradient(bottom right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p#copyright {
+    font-size: 14px;
+	text-align: center;
+	margin-bottom: 5px;
+	margin-top: 150px;
+	color: #666666;
+	/* font-weight: bold; */
+}
+
+.container {
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+}
+
+div {
+    border-radius: 20px;
+}
+
+div.card {
+    background-color: var(--primary);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 20px;
+}
+
+div.card p {
+    padding: 4%;
+}
+
+div.subcard {
+    background-color: var(--secondary);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border-radius: 20px;
+}
+
+div.subcard p {
+    color: var(--text);
+    padding: 4%;
+}
