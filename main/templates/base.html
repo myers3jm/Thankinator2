@@ -20,7 +20,7 @@
                 <tr>
                     <td class="left">
                         <div>
-                            <div class="subcardDeck active">
+                            <div class="cyclable active">
                                 <div class="subcard">
                                     <p>Produce any number of personalized thank-you notes from a spreadsheet.</p>
                                 </div>
@@ -30,36 +30,49 @@
                                 <div class="subcard">
                                     <p>Easily add personalizations like photos.</p>
                                 </div>
+								<div class="button-card">
+									<button class="div-button" type="button" onclick="changeDeck()">
+										<h5>Get Started</h5>
+									</button>
+								</div>
                             </div>
-                            <div class="subcardDeck">
+                            <div class="cyclable">
                                 <div class="subcard">
-                                    <p>Item 1</p>
+                                    <form class="input-field" method="POST">
+										<input name="eventName" id="firstInput">
+									</form>
+									<p class="input-field prompt">Event Name</p>
+									<p class="input-field example">...my <span class="keyword">birthday party</span>...</p>
                                 </div>
                                 <div class="subcard">
-                                    <p>Item 2</p>
+                                    <form class="input-field" method="POST">
+										<input name="yourName">
+									</form>
+									<p class="input-field prompt">Your Name</p>
+									<p class="input-field example">...Sincerely, <span class="keyword">Alex Doe</span>...</p>
                                 </div>
                                 <div class="subcard">
-                                    <p>Item 3</p>
+                                    <form class="input-field" method="POST">
+										<input name="timeframe">
+									</form>
+									<p class="input-field prompt">Timeframe</p>
+									<p class="input-field example">...nice to see you <span class="keyword">last week</span>...</p>
                                 </div>
+								<div class="button-card">
+									<button class="div-button" type="button" onclick="changeDeck()">
+										<h5>Go Back</h5>
+									</button>
+								</div>
                             </div>
                         </div>
                     </td>
                     <td class="right">
                         <div class="card" style="flex: 1">
-                            <h3 style="padding-left: 2%">Does this tool make your life easier?</h3>
-                            <p>Consider buying me a coffee to say thanks!</p>
+                            <h3 style="padding-left: 4%">Does this tool make your life easier?</h3>
+                            <p style="padding-left: 4%">Consider buying me a coffee to say thanks!</p>
                             <div style="padding: 4%">
-                                <a href="https://www.buymeacoffee.com/jarmyrs"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jarmyrs&button_colour=000000&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=f9f1e1" /></a>
+                                <a href="https://www.buymeacoffee.com/jarmyrs"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jarmyrs&button_colour=000000&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=ffffff" /></a>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="left">
-                        <div class="button-card">
-                            <button class="div-button" type="button" onclick="changeDeck()">
-                                <h5 class="color-gradient">Get Started</h5>
-                            </button>
                         </div>
                     </td>
                 </tr>
@@ -67,12 +80,16 @@
 
 			<script>
                 let currentIndex = 0;
-                const subcardDecks = document.querySelectorAll('.subcardDeck');
+                const cyclables = document.querySelectorAll('.cyclable');
             
                 function changeDeck() {
-                      subcardDecks[currentIndex].classList.remove('active');
-                      currentIndex = (currentIndex + 1) % subcardDecks.length;
-                      subcardDecks[currentIndex].classList.add('active');
+					cyclables[currentIndex].classList.remove('active');
+					currentIndex = (currentIndex + 1) % cyclables.length;
+					cyclables[currentIndex].classList.add('active');
+
+					var navButton = document.getElementById("navButton");	
+					
+					document.getElementById("firstInput").focus();
                 }
             </script>
 			

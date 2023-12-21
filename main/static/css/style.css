@@ -3,21 +3,25 @@
 @media (prefers-color-scheme: light) {
     :root {
       --text: #171717;
+      --supplemental-text: #777777;
       --background: #f9f1e1;
       --primary: #fdeb9b;
       --secondary: #f6d465;
       --accent: #ca852b;
-      --dark-accent: #fde7ba;
+      --dark-accent: #ffe2a8;
+      --keyword: #36a460;
     }
 }
 @media (prefers-color-scheme: dark) {
     :root {
         --text: #171717;
+        --supplemental-text: #777777;
         --background: #171717;
         --primary: #f6d465;
         --secondary: #fdeb9b;
         --accent: #ca852b;
         --dark-accent: #313131;
+        --keyword: #36a460;
     }
 }
 
@@ -36,16 +40,20 @@ h4 {font-size: 1.777rem; /* 28.48px */}
 
 h5 {font-size: 1.333rem; /* 21.28px */}
 
-p {
+p, input {
     padding-left: 2%;
     padding-right: 2%;
+    margin: 0%;
+    background-color: transparent;
+    border: none;
+    font-size: 100%;
 }
 
 body {
     background-color: var(--background);
     color: var(--text);
     font-family: 'Poppins';
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5 {
@@ -62,11 +70,29 @@ a {
 
 .title {
     font-size: 300%;
+    font-weight: 1000;
 }
 
 .subtitle {
     font-style: italic;
+    font-weight: 800;
     font-size: 180%;
+}
+
+.input-field {
+    display: inline;
+}
+
+.input-field.prompt {
+    font-style: italic;
+}
+
+.input-field.example {
+    color: var(--supplemental-text);
+}
+
+.keyword {
+    color: var(--keyword);
 }
 
 p#copyright {
@@ -77,12 +103,6 @@ p#copyright {
 	color: #666666;
 }
 
-/* .container {
-    margin: auto;
-    margin-top: 0;
-    display: flex;
-} */
-
 div {
     border-radius: 20px;
 }
@@ -90,37 +110,39 @@ div {
 div.card {
     background-color: var(--primary);
     max-height: fit-content;
-    /* margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0%;
-    margin-bottom: 0%; */
     border-radius: 20px;
 }
-
-/* div.card p {
-    padding-left: 4%;
-    padding-right: 4%;
-} */
 
 div.subcard {
     background-color: var(--secondary);
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 0%;
-    margin-bottom: 0%;
-    /* border-radius: 20px; */
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-div.subcard p {
+div.subcard p, div.subcard input {
     color: var(--text);
     padding: 4%;
 }
 
-.subcardDeck {
+div.subcard input {
+    border-radius: 21px;
+    background-color: var(--primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.cyclable {
     display: none;
 }
 
-.subcardDeck.active {
+.cyclable.active {
     display: block;
 }
 
@@ -134,7 +156,7 @@ div.subcard p {
 
 button.div-button {
     background-color: transparent;
-    /* width: 100%; */
+    width: 100%;
     border: none;
     text-align: left;
     cursor: pointer;
@@ -157,9 +179,9 @@ table, tr, td {
 }
 
 td.left {
-    width: 70%;
+    width: 66%;
 }
 
 td.right {
-    width: 30%;
+    width: 34%;
 }
