@@ -1026,6 +1026,13 @@ td#donation-card {
   vertical-align: top;
   background-color: var(--dl-color-lights-cream);
   border-radius: 20px;
+  border-spacing: 2%;
+}
+
+.small-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2%;
 }
 
 .home-container13 {
@@ -1045,4 +1052,27 @@ table#form-table td.flow-prompt {
 
 .example-text {
   color: var(--dl-color-secondary-gray)
+}
+
+td.data-label {
+  width: 33%;
+}
+
+table.spreadsheet-example {
+  border-collapse: collapse;
+  border-color: var(--dl-color-secondary-gray);
+  width: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, 
+    from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+table.spreadsheet-example th, table.spreadsheet-example td {
+  color: var(--dl-color-secondary-black);
+  height: var(--dl-space-space-unit);
+  width: var(--dl-space-space-threeunits);
+  border: 1px solid var(--dl-color-secondary-black);
+}
+
+table.spreadsheet-example th {
+  background-color: #dddddd;
 }

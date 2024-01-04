@@ -28,25 +28,16 @@
                             <button class="home-hero-button2 button" onclick="scrollToFeatures()">
                                 Learn More&nbsp;→
                             </button>
-                            <script>
-                                function scrollToFeatures() {
-                                  // Get the features element by its ID
-                                  var featuresElement = document.getElementById('features');
-                            
-                                  // Scroll to the features using smooth behavior
-                                  featuresElement.scrollIntoView({ behavior: 'smooth' });
-                                }
-                              </script>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="home-details">
+            <div id="about" class="home-details">
                 <table class="home-details1">
 					<tr>
 						<td>
 							<span class="home-text sectionTitle">
-								<span>Details</span>
+								<span>About</span>
 								<br />
 							</span>
 							<h2 class="home-details-heading heading2">
@@ -183,56 +174,102 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>
-                                                    <span>What was the event?</span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <span class="example-text">...thank you for attending our </span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <input
-                                                    type="text"
-                                                    placeholder="fundraiser"
-                                                    id="event-name"
-                                                    name="Event Name"
-                                                    class="home-textinput input"
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span>When was the event?</span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <span class="example-text">...we valued the opportunity to see you </span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <input
-                                                    type="text"
-                                                    placeholder="last week"
-                                                    id="timeframe"
-                                                    name="Timeframe"
-                                                    class="home-textinput1 input"
-                                                    />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span>Where was the event?</span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <span class="example-text">...glad we could gather together at </span>
-                                                </td>
-                                                <td class="flow-prompt">
-                                                    <input
-                                                    type="text"
-                                                    placeholder="the Queen City Club"
-                                                    id="location"
-                                                    name="Location"
-                                                    class="home-textinput2 input"
-                                                    />
-                                                </td>
-                                            </tr>
+												<td>
+													<table>
+														<tr>
+															<td class="data-label">
+																<span>What was the event?</span>
+															</td>
+															<td class="flow-prompt">
+																<span class="example-text">...thank you for attending our </span>
+															</td>
+															<td class="flow-prompt">
+																<input
+																type="text"
+																placeholder="fundraiser"
+																id="event-name"
+																name="Event Name"
+																class="home-textinput input"
+																/>
+															</td>
+														</tr>
+														<tr>
+															<td class="data-label">
+																<span>When was the event?</span>
+															</td>
+															<td class="flow-prompt">
+																<span class="example-text">...we valued the opportunity to see you </span>
+															</td>
+															<td class="flow-prompt">
+																<input
+																type="text"
+																placeholder="last week"
+																id="timeframe"
+																name="Timeframe"
+																class="home-textinput1 input"
+																/>
+															</td>
+														</tr>
+														<tr>
+															<td class="data-label">
+																<span>Where was the event?</span>
+															</td>
+															<td class="flow-prompt">
+																<span class="example-text">...glad we could gather together at </span>
+															</td>
+															<td class="flow-prompt">
+																<input
+																type="text"
+																placeholder="the Queen City Club"
+																id="location"
+																name="Location"
+																class="home-textinput2 input"
+																/>
+															</td>
+														</tr>
+														<tr>
+															<td style="width: 100%;">
+																<div class="home-container11">
+																	<span class="home-text17 heading3">data upload</span>
+																</div>
+																<span class="home-text10">Here's the format your data will need to be in</span>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="small-card">
+														<table class="spreadsheet-example">
+															<tr>
+																<th>Person</th>
+																<th>Address</th>
+																<th>Attendance</th>
+																<th>Gift</th>
+															</tr>
+															<tr>
+																<td>John Smith</td>
+																<td>45 Main St.</td>
+																<td>Yes</td>
+																<td>$500</td>
+															</tr>
+															<tr>
+																<td>Jane Doe</td>
+																<td>34 W Ave.</td>
+																<td>No</td>
+																<td>$450</td>
+															</tr>
+															<tr>
+																<td>Alex Wilson</td>
+																<td>101 Cedar Blvd.</td>
+																<td>Yes</td>
+																<td>$8000</td>
+															</tr>
+														</table>
+													</div>
+												</td>
+											</tr>
                                             <tr>
                                                 <td>
                                                     <div class="home-container10">
