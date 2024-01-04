@@ -1,14 +1,14 @@
 class Event:
-    def __init__(self, title: str, highlights: list, timeframe: str):
+    def __init__(self, title: str, location: str, timeframe: str):
         self.title = title
-        self.highlights = highlights
+        self.location = location
         self.timeframe = timeframe
     
     def getTitle(self) -> str:
         return self.title
     
-    def getHighlights(self) -> str:
-        return self.highlights
+    def getLocation(self) -> str:
+        return self.location
     
     def getTimeframe(self) -> str:
         return self.timeframe
