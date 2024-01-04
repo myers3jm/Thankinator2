@@ -945,7 +945,16 @@
   }
 }
 
+
+
+
 /* Manually created styles */
+td.details-panel {
+  display: inline-flex;
+  max-width: 66%;
+  vertical-align: top;
+}
+
 .home-faq-table {
   width: 100%;
 }
@@ -1011,4 +1020,29 @@ div.home-container12 button:hover {
 /* submission button active state */
 div.home-container12 button:active {
   background-color: var(--dl-color-secondary-limabean);
+}
+
+td#donation-card {
+  vertical-align: top;
+  background-color: var(--dl-color-lights-cream);
+  border-radius: 20px;
+}
+
+.home-container13 {
+  flex-direction: column;
+  padding: var(--dl-space-space-twounits);
+  gap: var(--dl-space-space-oneandhalfunits);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+table#form-table td.flow-prompt {
+  display: inline-flex;
+}
+
+.example-text {
+  color: var(--dl-color-secondary-gray)
 }

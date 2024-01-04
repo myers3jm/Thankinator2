@@ -42,29 +42,52 @@
                 </div>
             </div>
             <div class="home-details">
-                <div class="home-details1">
-                    <div class="home-container02">
-                        <span class="home-text sectionTitle">
-                            <span>Details</span>
-                            <br />
-                        </span>
-                        <h2 class="home-details-heading heading2">
-                            Powerful. Scalable. Sincere.
-                        </h2>
-                        <span class="home-details-sub-heading">
-                            Express your gratitude to a larger audience than ever before.
-                            With our intuitive interface, you can easily describe your
-                            event, submit your data, and download your mailing-ready
-                            gratitude letters in a matter of seconds. Experience the
-                            efficiency and convenience today.
-                        </span>
-                    </div>
-                    <img
-                        alt="image"
-                        src="https://images.unsplash.com/photo-1629194891750-cd24c0b9596f?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcwMzEyNTMwMnw&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=400"
-                        class="home-details-image"
-                    />
-                </div>
+                <table class="home-details1">
+					<tr>
+						<td>
+							<span class="home-text sectionTitle">
+								<span>Details</span>
+								<br />
+							</span>
+							<h2 class="home-details-heading heading2">
+								Powerful. Scalable. Sincere.
+							</h2>
+						</td>
+					</tr>
+                    <tr>
+						<td class="details-panel">
+							<div class="home-container02">
+								
+								<span class="home-details-sub-heading">
+									Express your gratitude to a larger audience than ever before.
+									With our intuitive interface, you can easily describe your
+									event, submit your data, and download your mailing-ready
+									gratitude letters in a matter of seconds. Experience the
+									efficiency and convenience today.
+								</span>
+							</div>
+						</td>
+						<td class="details-panel" style="scale: 3; justify-content: right;">
+							<div style="width: 33%; padding: 4%;">
+								<table>
+									<tr>
+										<td style="padding: inherit;">
+											<span class="material-symbols-outlined">
+												history_edu
+											</span>
+											<span class="material-symbols-outlined">
+												speed
+											</span>
+											<span class="material-symbols-outlined">
+												print
+											</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+                </table>
             </div>
             <div id="features" class="home-features">
                 <div class="home-features-container">
@@ -146,73 +169,97 @@
                             Provide some information to get started...
                         </h2>
                     </div>
-                    <form action="/upload" method="post" enctype="multipart/form-data">
-                        <div id="form-div">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="home-container11">
-                                            <span class="home-text17 heading3">event info</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span>What was the event?</span>
-                                    </td>
-                                    <td>
-                                        <input
-                                        type="text"
-                                        placeholder="Fundraiser"
-                                        id="event-name"
-                                        name="Event Name"
-                                        class="home-textinput input"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span>When was the event?</span>
-                                    </td>
-                                    <td>
-                                        <input
-                                        type="text"
-                                        placeholder="Last week"
-                                        id="timeframe"
-                                        name="Timeframe"
-                                        class="home-textinput1 input"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span>Where was the event?</span>
-                                    </td>
-                                    <td>
-                                        <input
-                                        type="text"
-                                        placeholder="The Art Museum"
-                                        id="location"
-                                        name="Location"
-                                        class="home-textinput2 input"
-                                        />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="home-container10">
-                                            <input type="file" name="file" accept=".xlsx">
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="home-container12">
-                                            <button type="submit">Upload</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </form>
+                    <table>
+                        <tr>
+                            <td>
+                                <form action="/upload" method="post" enctype="multipart/form-data">
+                                    <div id="form-div">
+                                        <table id="form-table">
+                                            <tr>
+                                                <td>
+                                                    <div class="home-container11">
+                                                        <span class="home-text17 heading3">event info</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>What was the event?</span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <span class="example-text">...thank you for attending our </span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <input
+                                                    type="text"
+                                                    placeholder="fundraiser"
+                                                    id="event-name"
+                                                    name="Event Name"
+                                                    class="home-textinput input"
+                                                    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>When was the event?</span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <span class="example-text">...we valued the opportunity to see you </span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <input
+                                                    type="text"
+                                                    placeholder="last week"
+                                                    id="timeframe"
+                                                    name="Timeframe"
+                                                    class="home-textinput1 input"
+                                                    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>Where was the event?</span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <span class="example-text">...glad we could gather together at </span>
+                                                </td>
+                                                <td class="flow-prompt">
+                                                    <input
+                                                    type="text"
+                                                    placeholder="the Queen City Club"
+                                                    id="location"
+                                                    name="Location"
+                                                    class="home-textinput2 input"
+                                                    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="home-container10">
+                                                        <input type="file" name="file" accept=".xlsx">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="home-container12">
+                                                        <button type="submit">Upload</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </form>
+                            </td>
+                            <td id="donation-card">
+                                <div class="home-container13">
+                                    <h3 class="home-text06 heading3">Does this tool make your life easier?</h3>
+                                    <span class="home-text07">
+                                        Consider buying me a coffee to say thanks!
+                                    </span>
+                                    <a href="https://www.buymeacoffee.com/jarmyrs"><img src="https://img.buymeacoffee.com/button-api/?text=&emoji=&slug=jarmyrs&button_colour=171717&font_colour=f9f1e1&font_family=Poppins&outline_colour=f9f1e1&coffee_colour=f9f1e1" /></a>    
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="home-faq">
